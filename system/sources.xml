@@ -1,0 +1,107 @@
+<?xml version="1.0" ?><manifest>
+  <remote fetch="git://github.com/mozilla-b2g/" name="b2g"/>
+  <remote fetch="git://github.com/gp-b2g/" name="gp-b2g"/>
+  <remote fetch="http://git.mozilla.org/" name="mozillaorg"/>
+  <remote fetch="git://codeaurora.org/" name="caf"/>
+  <remote fetch="git://android.git.linaro.org/" name="linaro"/>
+  <remote fetch="git://codeaurora.org/quic/qrd-android" name="QRD"/>
+  <default remote="QRD" revision="ics_master_qrd_101" sync-j="9"/>
+
+  <!-- Gonk specific things and forks -->
+  <project name="platform_build" path="build" remote="gp-b2g" revision="8f09e1290e7492bbdbd42903e6408711aa423a3e">
+    <copyfile dest="Makefile" src="core/root.mk"/>
+  </project>
+  <!-- Information: fake-dalvik is tagged with B2G_1_0_0_20130125190500 --><project name="fake-dalvik" path="dalvik" remote="b2g" revision="ca1f327d5acc198bb4be62fa51db2c039032c9ce"/>
+  <project name="releases/gaia.git" path="gaia" remote="mozillaorg" revision="bb399f3d6382326713c389695b909a6a05f10371"/>
+  <project name="releases/gecko.git" path="gecko" remote="mozillaorg" revision="e991389d327160613ab06288feec78951abf525d"/>
+  <project name="gonk-misc" path="gonk-misc" remote="b2g" revision="917cb23483a02eb70d5b86a1a4d2eae65adab2d4"/>
+  <project name="rilproxy" path="rilproxy" remote="b2g" revision="590f21cf3f4e67a166ea424efee933b19858ed0c"/>
+  <!-- Information: librecovery is tagged with B2G_1_0_0_20130125190500 --><project name="librecovery" path="librecovery" remote="b2g" revision="601fc18b28c9d7cf6954b281ddd3b705c74a9215"/>
+  <project name="moztt" path="external/moztt" remote="b2g" revision="556a26df54d9cbdd651c43c584e1e2bd6f3c44d6"/>
+
+  <!-- Stock Android things -->
+  <!-- Information: platform/abi/cpp is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/abi/cpp" path="abi/cpp" remote="caf" revision="6426040f1be4a844082c9769171ce7f5341a5528"/>
+  <!-- Information: platform/bionic is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.01.19.008 --><project name="platform/bionic" path="bionic" remote="caf" revision="c69596cbe809066b107c297c48cc715bdd430578"/>
+  <!-- Information: platform/bootable/recovery is tagged with R8625SSNSKQLYA10145451 --><project name="platform/bootable/recovery" path="bootable/recovery" revision="0bd2e99de079cdc419e372b58e22e1e78bf9442a"/>
+  <!-- Information: platform/development is tagged with R8625SSNSKQLYA10045450 --><project name="platform/development" path="development" revision="39bccab69a794d79c01a6611930b7088b508b000"/>
+ <!-- Information: device/common is tagged with R8625SSNSKQLYA10020200 --><project name="device/common" path="device/common" revision="7bb80921d5c5101cb7cbf31dca81969a6918ee5d"/>
+  <!-- Information: device/sample is tagged with R8625SSNSKQLYA10025250 --><project name="device/sample" path="device/sample" revision="5e7570b5addce5b20e7de6fd5fe0feb8c956f443"/>
+  <!-- Information: platform/external/apache-http is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/apache-http" path="external/apache-http" remote="caf" revision="6c9d8c58d3ed710f87c26820d903bb8aad81754f"/>
+  <!-- Information: platform/external/bluetooth/bluez is tagged with R8625SSNSKQLYA10145451 --><project name="platform/external/bluetooth/bluez" path="external/bluetooth/bluez" revision="8237db62b572cebcdc66c9e103438cd077b0f5ad"/>
+  <!-- Information: platform/external/bluetooth/glib is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/bluetooth/glib" path="external/bluetooth/glib" remote="caf" revision="c6b49241cc1a8950723a5f74f8f4b4f4c3fa970e"/>
+  <!-- Information: platform/external/bluetooth/hcidump is tagged with R8625SSNSKQLYA10030300 --><project name="platform/external/bluetooth/hcidump" path="external/bluetooth/hcidump" revision="5969a505c0d60038aa63c498b345dba60f594d30"/>
+  <!-- Information: platform/external/bsdiff is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/bsdiff" path="external/bsdiff" remote="caf" revision="81872540236d9bb15cccf963d05b9de48baa5375"/>
+  <!-- Information: platform/external/bzip2 is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/bzip2" path="external/bzip2" remote="caf" revision="048dacdca43eed1534689ececcf2781c63e1e4ba"/>
+  <!-- Information: platform/external/dbus is tagged with R8625SSNSKQLYA10025250 --><project name="platform/external/dbus" path="external/dbus" revision="4dfb8ed1d6d424056e19910e89d8ee76ada44304"/>
+  <!-- Information: platform/external/dhcpcd is tagged with R8625SSNSKQLYA10015150 --><project name="platform/external/dhcpcd" path="external/dhcpcd" revision="c3e61f52408219164c388025028e6f158d4545ca"/>
+  <!-- Information: platform/external/dnsmasq is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/dnsmasq" path="external/dnsmasq" remote="caf" revision="f621afad94df46204c25fc2593a19d704d2637f5"/>
+  <!-- Information: platform/external/e2fsprogs is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/e2fsprogs" path="external/e2fsprogs" remote="caf" revision="d5f550bb2f556c5d287f7c8d2b77223654bcec37"/>
+  <!-- Information: platform/external/expat is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/expat" path="external/expat" remote="caf" revision="6df134250feab71edb5915ecaa6268210bca76c5"/>
+  <!-- Information: platform/external/fdlibm is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/fdlibm" path="external/fdlibm" remote="caf" revision="988ffeb12a6e044ae3504838ef1fee3fe0716934"/>
+  <!-- Information: platform/external/flac is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/flac" path="external/flac" remote="caf" revision="5893fbe890f5dab8e4146d2baa4bd2691c0739e0"/>
+  <!-- Information: platform/external/freetype is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/freetype" path="external/freetype" remote="caf" revision="aeb407daf3711a10a27f3bc2223c5eb05158076e"/>
+  <!-- Information: platform/external/giflib is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/giflib" path="external/giflib" remote="caf" revision="b2597268aef084202a8c349d1cc072c03c6e22eb"/>
+  <!-- Information: platform/external/gtest is tagged with android-4.2.2_r1.2 --><project name="platform/external/gtest" path="external/gtest" remote="linaro" revision="344e5f3db17615cc853073a02968a603efd39109"/>
+  <!-- Information: platform/external/harfbuzz is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/harfbuzz" path="external/harfbuzz" remote="caf" revision="116610d63a859521dacf00fb6818ee9ab2e666f6"/>
+  <!-- Information: platform/external/icu4c is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/icu4c" path="external/icu4c" remote="caf" revision="0fa67b93b831c6636ca18b152a1b1b14cc99b034"/>
+  <!-- Information: platform/external/iptables is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/iptables" path="external/iptables" remote="caf" revision="3b2deb17f065c5664bb25e1a28489e5792eb63ff"/>
+  <!-- Information: platform/external/jhead is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/jhead" path="external/jhead" remote="caf" revision="754078052c687f6721536009c816644c73e4f145"/>
+  <!-- Information: platform/external/jpeg is tagged with AU_LINUX_ANDROID_ICS_CHOCOLATE.04.00.04.05.324 --><project name="platform/external/jpeg" path="external/jpeg" remote="caf" revision="a62e464d672a4623233180e4023034bf825f066e"/>
+  <!-- Information: platform/external/libgsm is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/libgsm" path="external/libgsm" remote="caf" revision="5e4516958690b9a1b2c98f88eeecba3edd2dbda4"/>
+  <!-- Information: platform/external/liblzf is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/liblzf" path="external/liblzf" remote="caf" revision="6946aa575b0949d045722794850896099d937cbb"/>
+  <!-- Information: platform/external/libnfc-nxp is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/libnfc-nxp" path="external/libnfc-nxp" remote="caf" revision="3a912b065a31a72c63ad56ac224cfeaa933423b6"/>
+  <!-- Information: platform/external/libnl-headers is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/libnl-headers" path="external/libnl-headers" remote="caf" revision="6ccf7349d61f73ac26a0675d735d903ab919c658"/>
+  <!-- Information: platform/external/libphonenumber is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/libphonenumber" path="external/libphonenumber" remote="caf" revision="8d22c9a05eda1935c6dc27d188158e6ee38dc016"/>
+  <!-- Information: platform/external/libpng is tagged with M8960AAAAANLYA100715A --><project name="platform/external/libpng" path="external/libpng" remote="caf" revision="9c3730f0efa69f580f03463c237cd928f3196404"/>
+  <!-- Information: platform/external/libvpx is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/libvpx" path="external/libvpx" remote="caf" revision="2618c324e2ecd1fa5dbfb8cc0ba0911f4fd255d9"/>
+  <!-- Information: platform/external/llvm is tagged with AU_LINUX_ANDROID_ICS_CHOCOLATE.04.00.04.005.325 --><project name="platform/external/llvm" path="external/llvm" remote="caf" revision="bff5923831940309f7d8ddbff5826ca6ed2dc050"/>
+  <!-- Information: platform/external/mksh is tagged with AU_LINUX_ANDROID_ICS_CHOCOLATE.04.00.04.005.325 --><project name="platform/external/mksh" path="external/mksh" remote="caf" revision="ec646e8f5e7dac9a77d1de549c6ed92c04d0cd4b"/>
+  <!-- Information: platform_external_opensans is tagged with B2G_1_0_0_20130125190500 --><project name="platform_external_opensans" path="external/opensans" remote="b2g" revision="b5b4c226ca1d71e936153cf679dda6d3d60e2354"/>
+  <!-- Information: platform/external/openssl is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/openssl" path="external/openssl" remote="caf" revision="c63c712a6a20e2c1b6085601c2d48e3f3ef32f73"/>
+  <!-- Information: platform/external/protobuf is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/protobuf" path="external/protobuf" remote="caf" revision="e217977611c52bccde7f7c78e1d3c790c6357431"/>
+  <!-- Information: platform/external/safe-iop is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/safe-iop" path="external/safe-iop" remote="caf" revision="07073634e2e3aa4f518e36ed5dec3aabc549d5fb"/>
+  <!-- Information: screencap-gonk is tagged with B2G_1_0_0_20130125190500 --><project name="screencap-gonk" path="external/screencap-gonk" remote="b2g" revision="e6403c71e9eca8cb943739d5a0a192deac60fc51"/>
+  <!-- Information: platform/external/skia is tagged with M8960AAAAANLYA100715A --><project name="platform/external/skia" path="external/skia" remote="caf" revision="7d90c85f2c0e3b747f7c7eff8bc9253b0063b439"/>
+  <!-- Information: platform/external/sonivox is tagged with AU_LINUX_ANDROID_ICS_CHOCOLATE.04.00.04.005.325 --><project name="platform/external/sonivox" path="external/sonivox" remote="caf" revision="7c967779dfc61ac1f346e972de91d4bfce7dccbb"/>
+  <!-- Information: platform/external/speex is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/speex" path="external/speex" remote="caf" revision="ebe6230a7f7c69f5a4389f2b09b7b19ef9e94f32"/>
+  <project name="platform/external/sqlite" path="external/sqlite" remote="caf" revision="fb30e613139b8836fdc8e81e166cf3a76e5fa17f"/>
+  <!-- Information: platform/external/stlport is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/stlport" path="external/stlport" remote="caf" revision="a6734e0645fce81c9610de0488b729207bfa576e"/>
+  <!-- Information: platform/external/strace is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/strace" path="external/strace" remote="caf" revision="c9fd2e5ef7d002e12e7cf2512506c84a9414b0fd"/>
+  <!-- Information: platform/external/tagsoup is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/tagsoup" path="external/tagsoup" remote="caf" revision="68c2ec9e0acdb3214b7fb91dbab8c9fab8736817"/>
+  <!-- Information: platform/external/tinyalsa is tagged with AU_LINUX_ANDROID_ICS_CHOCOLATE.04.00.04.005.325 --><project name="platform/external/tinyalsa" path="external/tinyalsa" remote="caf" revision="06cc244ee512c1352215e543615738bc8ac82814"/>
+  <!-- Information: platform/external/tremolo is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/tremolo" path="external/tremolo" remote="caf" revision="25bd78d2392dbdc879ae53382cde9d019f79cf6f"/>
+  <!-- Information: unbootimg is tagged with B2G_1_0_0_20130125190500 --><project name="unbootimg" path="external/unbootimg" remote="b2g" revision="9464623d92eb8668544916dc5a8f4f6337d0bc08"/>
+  <!-- Information: platform/external/webp is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/webp" path="external/webp" remote="caf" revision="88fe2b83c4b9232cd08729556fd0485d6a6a92cd"/>
+  <!-- Information: platform/external/webrtc is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/webrtc" path="external/webrtc" remote="caf" revision="137024dc8a2e9251a471e20518a9c3ae06f81f23"/>
+  <!-- Information: platform/external/wpa_supplicant is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/wpa_supplicant" path="external/wpa_supplicant" remote="caf" revision="a01d37870bbf9892d43e792e5de0683ca41c5497"/>
+  <!-- Information: platform/external/hostap is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.01.19.010 --><project name="platform/external/hostap" path="external/hostap" remote="caf" revision="3430d08b078238310eae519d0e5b7edf44f2f812"/>
+  <!-- Information: platform/external/zlib is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.00.01.19.008 --><project name="platform/external/zlib" path="external/zlib" remote="caf" revision="f96a1d1ebfdf1cd582210fd09c23d8f59e0ae094"/>
+  <!-- Information: platform/external/yaffs2 is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/external/yaffs2" path="external/yaffs2" remote="caf" revision="0afa916204c664b3114429637b63af1321a0aeca"/>
+  <!-- Information: platform/frameworks/opt/emoji is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/frameworks/opt/emoji" path="frameworks/opt/emoji" remote="caf" revision="a95d8db002770469d72dfaf59ff37ac96db29a87"/>
+  <!-- Information: platform/frameworks/support is tagged with R8625SSNSKQLYA10020200 --><project name="platform/frameworks/support" path="frameworks/support" revision="4dd4b4a0bf246fa6a9fa4e8822b891881e4999aa"/>
+  <!-- Information: platform/libcore is tagged with R8625SSNSKQLYA10030300 --><project name="platform/libcore" path="libcore" revision="3d5efee086af26ed25b1120101481d5e7c995e96"/>
+  <!-- Information: platform/ndk is tagged with AU_LINUX_GECKO_ICS_STRAWBERRY.01.01.00.019.094 --><project name="platform/ndk" path="ndk" remote="caf" revision="9f555971e1481854d5b4dc11b3e6af9fff4f241f"/>
+  <!-- Information: platform/prebuilt is tagged with R8625SSNSKQLYA10020200 --><project name="platform/prebuilt" path="prebuilt" revision="248d92592df169569c387a91db56b1fedd6e5d29"/>
+  <!-- Information: platform/system/bluetooth is tagged with R8625SSNSKQLYA10025250 --><project name="platform/system/bluetooth" path="system/bluetooth" revision="ce8eb665209993bcaf7135e9deb66e21f55ca037"/>
+  <!-- Information: platform/system/core is tagged with R8625SSNSKQLYA10145451 --><project name="platform/system/core" path="system/core" revision="4e343c3e62ef70d1f370eaa01efedea8ad155f5a"/>
+  <!-- Information: platform/system/extras is tagged with R8625SSNSKQLYA10020200 --><project name="platform/system/extras" path="system/extras" revision="7ee577ee53f576247f82509e8afa26da1c266393"/>
+  <!-- Information: platform/system/media is tagged with R8625SSNSKQLYA10015150 --><project name="platform/system/media" path="system/media" revision="4eca3650c0949ad6dbb236e7042e809eaf7fe371"/>
+  <!-- Information: platform/system/netd is tagged with R8625SSNSKQLYA10045450 --><project name="platform/system/netd" path="system/netd" revision="6fd7ba6ea99a6097a7107e68592be249f47cdc71"/>
+  <!-- Information: platform/system/vold is tagged with M8960AAAAANLYA100715A --><project name="platform/system/vold" path="system/vold" remote="caf" revision="99fff257d53cc045d1460841edca5d901dacfcf5"/>
+  <!-- Information: platform/hardware/qcom/media is tagged with R8625SSNSKQLYA10145451 --><project name="platform/hardware/qcom/media" path="hardware/qcom/media" revision="b206ade938e677b7fdd16fda3e57a52299887258"/>
+  <!-- Information: platform/hardware/qcom/gps is tagged with R8625SSNSKQLYA10040400 --><project name="platform/hardware/qcom/gps" path="hardware/qcom/gps" revision="c304ae79825b2473979759f409e7bef7cb64ff08"/>
+  <!-- Information: platform/hardware/msm7k is tagged with R8625SSNSKQLYA10045450 --><project name="platform/hardware/msm7k" path="hardware/msm7k" revision="09a32e25839cd6ed1da92640c72a3c757d7eba2d"/>
+  <!-- Information: platform/vendor/qcom-opensource/omx/mm-core is tagged with R8625SSNSKQLYA10040400 --><project name="platform/vendor/qcom-opensource/omx/mm-core" path="vendor/qcom/opensource/omx/mm-core" revision="c64ee4a86567e08e278c67c24f64836d040513c2"/>
+  <!-- Information: device/qcom/common is tagged with R8625SSNSKQLYA10145451 --><project name="device/qcom/common" path="device/qcom/common" revision="385f9fec20e2c901f33a62a42480c63bb15b8368"/>
+
+  <!-- Keon specific things -->
+  <project name="device_qcom_msm7627a" path="device/qcom/msm7627a" remote="gp-b2g" revision="8eb902f9c50de45fc35b7eef1003e36cd8440a36"/>
+  <project name="device-gp-keon" path="device/geeksphone/keon" remote="b2g" revision="33935f6e0da2c21eb527b7c00a2eb8c02a6e2b31"/>
+  <project name="gp-keon-kernel" path="kernel" remote="gp-b2g" revision="cee5258f24ea7edee757e6303367b14aac267540"/>
+  <project name="external_compat-wireless" path="external/compat-wireless" remote="gp-b2g" revision="030858dcfbcc61c5e4ed6f8b5454962f97cb509c"/>
+  <project name="frameworks_base" path="frameworks/base" remote="gp-b2g" revision="6f1506389716b6b6d5e24efe2a2e332f872d0666"/>
+  <project name="hardware_ril" path="hardware/ril" remote="gp-b2g" revision="9a24de7af59ff4a2ce6d1ab009adbe6fe05879d3"/>
+  <project name="hardware_qcom_display" path="hardware/qcom/display" remote="gp-b2g" revision="9b6dff4d75684e5299209d578a32d66c8cf06c3c"/>
+  <project name="hardware_libhardware" path="hardware/libhardware" remote="gp-b2g" revision="34484bb29dff081e6bcef0a51361cc59cfc08a1e"/>
+  <project name="hardware_libhardware_legacy" path="hardware/libhardware_legacy" remote="gp-b2g" revision="aee64e824380a161ff24f999ddcf0ae1006267eb"/>
+</manifest>

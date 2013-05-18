@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!--
+ * 
+ * Copyright (c) 2012, Code Aurora Forum. All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are
+ * met:
+ *     * Redistributions of source code must retain the above copyright
+ *       notice, this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above
+ *       copyright notice, this list of conditions and the following
+ *       disclaimer in the documentation and/or other materials provided
+ *       with the distribution.
+ *     * Neither the name of Code Aurora Forum, Inc. nor the names of its
+ *       contributors may be used to endorse or promote products derived
+ *       from this software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ * BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ * BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+ * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ -->
+
+<QIMF>
+<sip_local_port value="5060" />
+<sip_proxy_name value="chinanetcw.chinatelecom.cn" />
+<sip_proxy_port value="5060" />
+<timer_sip_reg value="3600" />
+<timer_t1 value="2000" />
+<timer_t2 value="4000" />
+<timer_t4 value="5000" />
+<compact_form value="0" />
+<sigcomp value="0" />
+<auth_schema value="1" />
+<tcp_threshold value="6000" />
+<ptime value="160" />
+<initial_buffer_time value="200" />
+<amr_mode value="1" />
+<proxy_route value="chinanetcw.chinatelecom.cn" />
+<ipv6_enabled value="0" />
+<sip_dscp_value value="344" />
+<msrp_packet_size value="57487996" />
+<app_field id="IETF_CONFIG_USERNAME" type="string" value="sip:%imsi%@chinanetcw.chinatelecom.cn" />
+<app_field id="IETF_CONFIG_PASSWORD" type="string" value="%imsi%" />
+<app_field id="IETF_CONFIG_DOMAIN" type="string" value="chinanetcw.chinatelecom.cn" />
+<app_field id="IETF_CONFIG_PRIVATE_URI" type="string" value="%imsi%@chinanetcw.chinatelecom.cn" />
+<app_field id="IETF_CONFIG_DISPLAY_NAME" type="string" value="CTC-CW" />
+<app_field id="REGMGR_CONFIG_POWERON_REGISTER" type="int32" value="0" />
+<app_field id="REGMGR_CONFIG_ON_CALL_REGISTER" type="int32" value="0" />
+<app_field id="REGMGR_CONFIG_IETF_IMS_REGISTER" type="int32" value="0" />
+<app_field id="REGMGR_CONFIG_REG_EVENT_PACKAGE" type="int32" value="1" />
+<app_field id="REGMGR_CONFIG_PCO_ENABLED" type="int32" value="0" />
+<app_field id="REGMGR_CONFIG_DHCP_ENABLED" type="int32" value="0" />
+<app_field id="REGMGR_CONFIG_PRECONFIG_ENABLED" type="int32" value="1" />
+<app_field id="REGMGR_CONFIG_PRECONFIG_SERVER_BASE" type="string" value="chinanetcw.chinatelecom.cn:5060" />
+<app_field id="REGMGR_CONFIG_RAT" type="int32" value="4" />
+<app_field id="REGMGR_CONFIG_USERNAME_FROM_IMSI" type="int32" value="1" />
+<app_field id="REGMGR_CONFIG_RESPONSE_FOR_OPTIONS" type="int32" value="200" />
+<app_field id="REGMGR_CONFIG_REG_NO_NETWORK" type="int32" value="0"/>
+<app_field id="REGMGR_CONFIG_ADD_HEADER_BASE" type="string" value="X-CT-Tunnel: IP%ipv%" />
+<app_field id="REGMGR_CONFIG_OPTIONS_COUNT" type="int32" value="0" />
+<app_field id="REGMGR_CONFIG_OPTIONS_OUT_CALLS" type="int32" value="0" />
+<app_field id="REGMGR_CONFIG_OPTIONS_IN_CALLS" type="int32" value="0" />
+<app_field id="REGMGR_CONFIG_KEEPALIVE_INTERVAL" type="int32" value="5000" />
+<app_field id="REGMGR_CONFIG_KEEPALIVE_THRESHOLD" type="int32" value="5" />
+<app_field id="REGMGR_CONFIG_KEEPALIVE_PAYLOAD_LEN" type="int32" value="5" />
+</QIMF>
